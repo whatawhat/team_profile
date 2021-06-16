@@ -13,19 +13,34 @@ console.log(generateMarkdown);
 const questions = [
     {
         type: 'input',
-        message: 'What is the name of your project?',
-        name: 'title',
+        message: 'What is the employee\'s name?',
+        name: 'name',
     },
+    {
+        type: 'input',
+        message: 'What is the employee\'s ID?',
+        name: 'id',
+    },
+    {
+        type: 'input',
+        message: 'What is the employee\'s email address?',
+        name: 'email',
+    },
+    {
+        //list of license
+        type: 'list',
+        message: 'What is their role?',
+        name: 'role',
+        choices: ['Employee', 'Engineer', 'Intern', 'Manager'],
+    },
+
+
     {
         type: 'input',
         message: 'What is your github username?',
         name: 'username',
     },
-    {
-        type: 'input',
-        message: 'What is your email address?',
-        name: 'email',
-    },
+
     {
         type: 'input',
         message: 'Please describe your project.',
@@ -46,13 +61,7 @@ const questions = [
         message: 'Please write about usage.',
         name: 'usage',
     },
-    {
-        //list of license
-        type: 'list',
-        message: 'What license did you use?',
-        name: 'license',
-        choices: ['Apache 2.0', 'Boost', 'Eclipse', 'GNU AGPLv3', 'none'],
-    },
+
     {
         type: 'input',
         message: 'Please list who contributed to you application.',
