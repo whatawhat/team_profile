@@ -6,76 +6,86 @@ const jest = require("jest");
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
-console.log(generateMarkdown);
+//const generateMarkdown = require("./utils/generateMarkdown");
+//console.log(generateMarkdown);
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        message: 'What is the employee\'s name?',
+        message: 'What is your team manager\'s name?',
         name: 'name',
     },
     {
         type: 'input',
-        message: 'What is the employee\'s ID?',
+        message: 'What is your team manager\'s ID?',
         name: 'id',
     },
     {
         type: 'input',
-        message: 'What is the employee\'s email address?',
+        message: 'What is your team manager\'s email address?',
         name: 'email',
     },
     {
-        //list of license
+        type: 'input',
+        message: 'What is your team manager\'s office number?',
+        name: 'officeNum',
+    },
+]
+
+const roleQuestion = 
+    {
+        //list of roles
         type: 'list',
-        message: 'What is their role?',
+        message: 'What type of team member would you like to add?',
         name: 'role',
-        choices: ['Employee', 'Engineer', 'Intern', 'Manager'],
+        choices: ['Engineer', 'Intern', 'I\'m done adding team members.'],
     },
 
 
+const engineerQuestions = [
     {
         type: 'input',
-        message: 'What is your github username?',
+        message: 'What is your engineer\'s name?',
+        name: 'name',
+    },
+    {
+        type: 'input',
+        message: 'What is your engineer\'s ID?',
+        name: 'id',
+    },
+    {
+        type: 'input',
+        message: 'What is your engineer\'s email address?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is your engineer\'s github username?',
         name: 'username',
     },
+];
 
+const internQuestions = [
     {
         type: 'input',
-        message: 'Please describe your project.',
-        name: 'description',
+        message: 'What is your intern\'s name?',
+        name: 'name',
     },
     {
         type: 'input',
-        message: 'Please write how to install your application.',
-        name: 'installation',
+        message: 'What is your intern\'s ID?',
+        name: 'id',
     },
     {
         type: 'input',
-        message: 'What is your email address?',
-        name: 'table of contents',
+        message: 'What is your intern\'s email address?',
+        name: 'email',
     },
     {
         type: 'input',
-        message: 'Please write about usage.',
-        name: 'usage',
-    },
-
-    {
-        type: 'input',
-        message: 'Please list who contributed to you application.',
-        name: 'contributing',
-    },
-    {
-        type: 'input',
-        message: 'What tests took place?',
-        name: 'tests',
-    },
-    {
-        type: 'input',
-        message: 'What are some questions?',
-        name: 'Questions',
+        message: 'What is your intern\'s school?',
+        name: 'school',
     },
 ];
 
