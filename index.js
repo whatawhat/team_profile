@@ -1,13 +1,9 @@
 //Add Jest and Inquirer
 const inquirer = require("inquirer");
 const jest = require("jest");
-
-
-// TODO: Include packages needed for this application
-const inquirer = require("inquirer");
 const fs = require("fs");
-//const generateMarkdown = require("./utils/generateMarkdown");
-//console.log(generateMarkdown);
+const generateProfile = require("./src/generateTeamProfile");
+console.log(generateProfile);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -31,7 +27,7 @@ const questions = [
         message: 'What is your team manager\'s office number?',
         name: 'officeNum',
     },
-]
+];
 
 const roleQuestion = 
     {
@@ -40,7 +36,7 @@ const roleQuestion =
         message: 'What type of team member would you like to add?',
         name: 'role',
         choices: ['Engineer', 'Intern', 'I\'m done adding team members.'],
-    },
+    }
 
 
 const engineerQuestions = [
@@ -89,9 +85,9 @@ const internQuestions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// TODO: Create a function to write team profile
 function writeToFile(data) {
-    fs.writeFile("README.md", data, err => {
+    fs.writeFile("team.html", data, err => {
         if (err) throw err;
         console.log("Successfully made!");
     })
@@ -101,7 +97,7 @@ function writeToFile(data) {
 function init() {
     inquirer.prompt(questions).then(answers => {
         console.log(answers);
-        var template = generateMarkdown(answers);
+        var template = generateTeamProfile(answers);
         console.log(template);
         writeToFile(template);
     })
