@@ -25,7 +25,7 @@ const questions = [
     {
         type: 'input',
         message: 'What is your team manager\'s office number?',
-        name: 'officeNum',
+        name: 'officeNumber',
     },
 ];
 
