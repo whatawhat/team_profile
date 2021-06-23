@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const jest = require("jest");
 const fs = require("fs");
-const generateProfile = require("./src/generateTeamProfile");
+const generateProfile = require("./src/generateTeamProfile.js");
 console.log(generateProfile);
 
 // TODO: Create an array of questions for user input
@@ -93,13 +93,39 @@ function writeToFile(data) {
     })
 }
 
+
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(answers => {
         console.log(answers);
-        var template = generateTeamProfile(answers);
-        console.log(template);
-        writeToFile(template);
+    questionLoop();
+    //inquirer.prompt(roleQuestion).then(roles => {
+        // console.log(answers);
+        // generateProfile({answers});
+            // switch(roles.role) {
+            //   case "Engineer":
+            //       inquirer.prompt(engineerQuestions).then(answers => {
+            //           console.log(answers);
+            //       });
+
+                //let message = "Engineer"
+                //return console.log(message);
+            //     break;
+            //   case "Intern":
+            //     inquirer.prompt(internQuestions).then(answers => {
+            //         console.log(answers);});
+                // let messageOne = "Intern"
+                // return console.log(messageOne);
+            //     break;
+            //   case "None":
+            //       writeToFile(data.answers);
+          
+            
+        //call switch statement here?
+    //})
+        //var template = generateTeamProfile(answers);
+        //console.log(template);
+        //writeToFile(template);
     })
 }
 
