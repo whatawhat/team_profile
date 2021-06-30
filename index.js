@@ -4,6 +4,11 @@ const jest = require("jest");
 const fs = require("fs");
 const generateProfile = require("./src/generateTeamProfile.js");
 console.log(generateProfile);
+const Manager = require('./lib/Manager.js');
+const Employee = require('./lib/Employee.js');
+const Intern = require('./lib/Intern.js');
+const Engineer = require('./lib/Engineer.js');
+let workers = [];
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -93,12 +98,53 @@ function writeToFile(data) {
     })
 }
 
+function getEngineer() {
+    inquirer.prompt(engineerQuestions).then(answers => {
+        console.log(answers);
+        let newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.username)
+        workers.push(newEngineer);
+        console.log(workers);
+        menu();
+    })
+}
+
+function getIntern() {
+    inquirer.prompt(internQuestions).then(answers => {
+        console.log(answers);
+        let newIntern = new Intern(answers.name, answers.id, answers.email, answers.school)
+        workers.push(newIntern);
+        console.log(workers);
+        menu();
+    })
+}
+
+const menu = function() {
+    inquirer.prompt(roleQuestion).then(answers => {
+        console.log(answers);
+        if (answers.role === "Engineer") {
+            getEngineer()
+        }
+        if (answers.role === "Intern") {
+            getIntern()
+        }
+        if (answers.role === "I\'m done adding team members.") {
+            console.log("You're done!");
+            let templateGenerator = generateProfile(workers);
+            console.log(templateGenerator);
+            writeToFile(templateGenerator)
+        }
+    })
+  }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(answers => {
         console.log(answers);
-    questionLoop();
+        let newManager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
+        workers.push(newManager);
+        console.log(workers);
+        menu();
+    //questionLoop();
     //inquirer.prompt(roleQuestion).then(roles => {
         // console.log(answers);
         // generateProfile({answers});
