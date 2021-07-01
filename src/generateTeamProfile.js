@@ -1,9 +1,7 @@
-
-
 const inquirer = require("inquirer");
 
-function generateManagerCard (manager) {
-  return `<div class="col custom-card mb-5">
+function generateManagerCard(manager) {
+  return `<div class="col-md custom-card">
   <div class="card shadow">
   <div class="card-header bg-secondary text-light">
     <h3 class="card-title">${manager.name}</h3>
@@ -13,16 +11,18 @@ function generateManagerCard (manager) {
     <div class="card-body bg-infor">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${manager.id}</li>
-     <li class="list-group-item"><a href="mailto:${manager.getEmail()}">${manager.email}</a></li>
+     <li class="list-group-item"><a href="mailto:${manager.getEmail()}">${
+    manager.email
+  }</a></li>
      <li class="list-group-item">${manager.getOfficeNumber()}</li>
      </ul>
     </div>
     </div>
-  </div>`
+  </div>`;
 }
 
 function generateEngineerCard(engineer) {
-  return `<div class="col custom-card mb-5">
+  return `<div class="col-md custom-card">
   <div class="card shadow">
   <div class="card-header bg-secondary text-light">
   <h3 class="card-title">${engineer.name}</h3>
@@ -32,16 +32,20 @@ function generateEngineerCard(engineer) {
   <div class="card-body bg-info">
   <ul class="list-group list-group-flush">
   <li class="list-group-item">${engineer.id}</li>
-     <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">${engineer.email}</a></li>
-     <li class="list-group-item"><a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub}</a></li>
+     <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">${
+    engineer.email
+  }</a></li>
+     <li class="list-group-item"><a href="https://github.com/${engineer.getGithub()}">${
+    engineer.getGithub
+  }</a></li>
      </ul>
     </div>
     </div>
-  </div>`      
+  </div>`;
 }
 
 function generateInternCard(intern) {
-  return `<div class="col custom-card mb-5">
+  return `<div class="col-md custom-card">
   <div class="card shadow">
   <div class="card-header bg-secondary text-light">
     <h3 class="card-title">${intern.name}</h3>
@@ -51,27 +55,29 @@ function generateInternCard(intern) {
     <div class="card-body bg-info">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${intern.id}</li>
-     <li class="list-group-item"><a href="mailto:${intern.getEmail()}">${intern.email}</a></li>
+     <li class="list-group-item"><a href="mailto:${intern.getEmail()}">${
+    intern.email
+  }</a></li>
      <li class="list-group-item">${intern.getSchool()}</li>
      </ul>
     </div>
     </div>
-  </div>`
+  </div>`;
 }
 
 // TODO: Create a function that states what to show based on answers from list
 //switch statement
-function generateProfile (workers) {
+function generateProfile(workers) {
   let templateArray = [];
   for (var i = 0; i < workers.length; i++) {
     if (workers[i].getRole() === "Manager") {
-      templateArray.push(generateManagerCard(workers[i]))
+      templateArray.push(generateManagerCard(workers[i]));
     }
     if (workers[i].getRole() === "Engineer") {
-      templateArray.push(generateEngineerCard(workers[i]))
+      templateArray.push(generateEngineerCard(workers[i]));
     }
     if (workers[i].getRole() === "Intern") {
-      templateArray.push(generateInternCard(workers[i]))
+      templateArray.push(generateInternCard(workers[i]));
     }
   }
   return `  
@@ -96,7 +102,7 @@ function generateProfile (workers) {
 
   </body>
   
-  </html>`
+  </html>`;
   // switch(roles) {
   //   case "Engineer":
   //     let message = "Engineer"
@@ -111,19 +117,19 @@ function generateProfile (workers) {
   //     return console.log(messageTwo);
 
   // }
-  };
+}
 
-  // if (Engineer) {
-  //   engineerQuestions
-  // } else if (Intern) {
-  //   internQuestions
-  // } else {
-  //   generateProf
-  // }
- 
-  // TODO: Create a function to generate team profile
-  // function generateTeamProfile(answers) = {
-  //   if (answers === 
-  // }
+// if (Engineer) {
+//   engineerQuestions
+// } else if (Intern) {
+//   internQuestions
+// } else {
+//   generateProf
+// }
 
-  module.exports = generateProfile;
+// TODO: Create a function to generate team profile
+// function generateTeamProfile(answers) = {
+//   if (answers ===
+// }
+
+module.exports = generateProfile;
