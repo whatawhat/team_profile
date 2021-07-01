@@ -10,7 +10,7 @@ function generateManagerCard (manager) {
     <i class="d-inline bi bi-mouse2"></i>
     <h5 class="d-inline">${manager.getRole()}</h5>
     </div>
-    <div class="card-body">
+    <div class="card-body bg-infor">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${manager.id}</li>
      <li class="list-group-item"><a href="mailto:${manager.getEmail()}">${manager.email}</a></li>
@@ -29,7 +29,7 @@ function generateEngineerCard(engineer) {
   <i class="d-inline bi bi-bricks"></i>
   <h5 class="d-inline">${engineer.getRole()}</h5>
   </div>
-  <div class="card-body">
+  <div class="card-body bg-info">
   <ul class="list-group list-group-flush">
   <li class="list-group-item">${engineer.id}</li>
      <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">${engineer.email}</a></li>
@@ -48,7 +48,7 @@ function generateInternCard(intern) {
     <i class="d-inline bi bi-eyeglasses"></i>
     <h5 class="d-inline">${intern.getRole()}</h5>
     </div>
-    <div class="card-body">
+    <div class="card-body bg-info">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${intern.id}</li>
      <li class="list-group-item"><a href="mailto:${intern.getEmail()}">${intern.email}</a></li>
