@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 
+//Manager 
 function generateManagerCard(manager) {
   return `<div class="col-md custom-card">
   <div class="card shadow">
