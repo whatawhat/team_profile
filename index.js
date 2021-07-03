@@ -92,7 +92,7 @@ const internQuestions = [
 
 // TODO: Create a function to write team profile
 function writeToFile(data) {
-    fs.writeFile("team.html", data, err => {
+    fs.writeFile("dist/team.html", data, err => {
         if (err) throw err;
         console.log("Successfully made!");
     })
