@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-//Manager 
+//Manager card
 function generateManagerCard(manager) {
   return `<div class="col-md custom-card">
   <div class="card shadow">
@@ -20,6 +20,7 @@ function generateManagerCard(manager) {
   </div>`;
 }
 
+//Engineer Card
 function generateEngineerCard(engineer) {
   return `<div class="col-md custom-card">
   <div class="card shadow">
@@ -39,6 +40,7 @@ function generateEngineerCard(engineer) {
   </div>`;
 }
 
+//Intern Card
 function generateInternCard(intern) {
   return `<div class="col-md custom-card">
   <div class="card shadow">
@@ -96,33 +98,6 @@ function generateProfile(workers) {
   </body>
   
   </html>`;
-  // switch(roles) {
-  //   case "Engineer":
-  //     let message = "Engineer"
-  //     return console.log(message);
-  //     break;
-  //   case "Intern":
-  //     let messageOne = "Intern"
-  //     return console.log(messageOne);
-  //     break;
-  //   case "None":
-  //     let messageTwo = "None"
-  //     return console.log(messageTwo);
-
-  // }
 }
-
-// if (Engineer) {
-//   engineerQuestions
-// } else if (Intern) {
-//   internQuestions
-// } else {
-//   generateProf
-// }
-
-// TODO: Create a function to generate team profile
-// function generateTeamProfile(answers) = {
-//   if (answers ===
-// }
 
 module.exports = generateProfile;
