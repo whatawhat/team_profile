@@ -8,13 +8,11 @@ function generateManagerCard(manager) {
     <i class="d-inline bi bi-mouse2"></i>
     <h5 class="d-inline">${manager.getRole()}</h5>
     </div>
-    <div class="card-body bg-infor">
+    <div class="card-body bg-info">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">${manager.id}</li>
-     <li class="list-group-item"><a href="mailto:${manager.getEmail()}">${
-    manager.email
-  }</a></li>
-     <li class="list-group-item">${manager.getOfficeNumber()}</li>
+      <li class="list-group-item">ID: ${manager.id}</li>
+     <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.email}</a></li>
+     <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
      </ul>
     </div>
     </div>
@@ -31,13 +29,9 @@ function generateEngineerCard(engineer) {
   </div>
   <div class="card-body bg-info">
   <ul class="list-group list-group-flush">
-  <li class="list-group-item">${engineer.id}</li>
-     <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">${
-    engineer.email
-  }</a></li>
-     <li class="list-group-item"><a href="https://github.com/${engineer.getGithub()}">${
-    engineer.getGithub
-  }</a></li>
+  <li class="list-group-item">ID: ${engineer.id}</li>
+     <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.email}</a></li>
+     <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.github}</a></li>
      </ul>
     </div>
     </div>
@@ -54,11 +48,9 @@ function generateInternCard(intern) {
     </div>
     <div class="card-body bg-info">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">${intern.id}</li>
-     <li class="list-group-item"><a href="mailto:${intern.getEmail()}">${
-    intern.email
-  }</a></li>
-     <li class="list-group-item">${intern.getSchool()}</li>
+      <li class="list-group-item">ID: ${intern.id}</li>
+     <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.email}</a></li>
+     <li class="list-group-item">School: ${intern.getSchool()}</li>
      </ul>
     </div>
     </div>
