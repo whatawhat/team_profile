@@ -33,7 +33,7 @@ function generateEngineerCard(engineer) {
   <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${engineer.id}</li>
      <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.email}</a></li>
-     <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.github}</a></li>
+     <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.github}</a></li>
      </ul>
     </div>
     </div>
