@@ -1,0 +1,28 @@
+{
+  "name": "team_profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start":"node index.js",
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatawhat/team_profile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatawhat/team_profile/issues"
+  },
+  "homepage": "https://github.com/whatawhat/team_profile#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.4"
+  }
+}
