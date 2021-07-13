@@ -35,15 +35,14 @@ Input all data for your team. Once you are done, select that you are done. From 
 
 ## Screenshots
 This is the screen after you input the manager and given the option to add another team member.
-![Team Initial Profile](team_profile_pic4.png)
+![Team Initial Profile](images/team_profile_pic4.png)
 
 This is the screen after two team members are added.
-![Team Profile](team_profile_pic2.png)
+![Team Profile](images/team_profile_pic2.png)
 
 
 This is the HTML file that is generated after all team members are added.
-![Team Profile](team_generate_pic.png)
-
+![Team Profile](images/team_generate_pic.png)
 
 ## Sources
 Created and designed by me. Click [whatawhat](www.github.com/whatawhat) to visit my repository.
