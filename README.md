@@ -11,6 +11,7 @@
 This is an application that allows the user to input data for their team via the terminal and then an HTML file is generated.
 
 ## Video Link
+Here is a link to view how the application works. It walks your through the tests and application.
 [Link to Video Walkthrough](https://drive.google.com/file/d/1Y1387oLMv15UVaobafnYd0-dpTm5bjFo/view)
 
 ## Tests
